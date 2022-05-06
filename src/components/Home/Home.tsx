@@ -18,7 +18,7 @@ export default function Home({testData}) {
         label: 'Miner Reward',
         data: blockrewards,
         borderColor: 'rgb(56, 56, 56)',
-        backgroundColor: 'whitesmoke',
+        backgroundColor: 'red',
       }
     ],
 
