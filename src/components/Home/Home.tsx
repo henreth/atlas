@@ -4,7 +4,7 @@ import './Home.css';
 
 export default function Home({testData}) {
 
-  let blocknums = testData.map(block=>block.block_number)
+  let labels = testData.map(block=>block.block_number)
   let blockrewards = testData.map(block=>block.miner_reward)
 
   const options = {
@@ -12,7 +12,7 @@ export default function Home({testData}) {
   };
 
   const data = {
-    blocknums,
+    labels,
     datasets: [
       {
         label: 'Miner Reward',
