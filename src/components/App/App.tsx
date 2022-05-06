@@ -7,8 +7,8 @@ export default function App() {
   let [testData,setTestData] = useState([])
 
   useEffect(()=>{
-    fetch('https://blocks.flashbots.net/v1/blocks')
-   .then(r=>r.json()).then(r=>setTestData(r))
+    axios.get('https://blocks.flashbots.net/v1/blocks')
+    .then(r=>setTestData(r.data))
   },[])
 
   return (
