@@ -3,7 +3,9 @@ import './Home.css';
 
 export default function Home() {
   return (
-    <div>🤖⚡️</div>
+    <div className='home-container'>
+      <div className='home-title'>🤖⚡️</div>
+    </div>
   );
 }
 

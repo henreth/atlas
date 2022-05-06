@@ -1,1 +1,12 @@
- 
+ .home-container{
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 40vh;
+}
+
+.home-title{
+    font-size: 15vh;
+}
