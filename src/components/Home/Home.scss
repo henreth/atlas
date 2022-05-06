@@ -4,9 +4,21 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-top: 40vh;
+    margin-top: 1vh;
 }
 
 .home-title{
-    font-size: 15vh;
+    align-self: center;
+    font-size: 5vh;
+    color: floralwhite;
+    font-family: 'Questrial', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2vh;
 }
+
+.graph-container{
+    background-color: floralwhite;
+    width: 85vw;
+    border-radius: 7.5px;
+}
+
