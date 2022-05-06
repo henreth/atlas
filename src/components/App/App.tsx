@@ -4,16 +4,18 @@ import Home from '../Home/Home.tsx';
 import './App.css';
 
 export default function App() {
-  let [testData,setTestData] = useState([])
+  let [testData, setTestData] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get('https://blocks.flashbots.net/v1/blocks')
-    .then(r=>setTestData(r.data))
-  },[])
+      .then(r => setTestData(r.data.blocks))
+  }, [])
 
   return (
     <React.Fragment>
-      <Home />
+      <Home
+        testData={testData}
+      />
     </React.Fragment>
   );
 }
