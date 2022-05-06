@@ -9,7 +9,7 @@
 
 .home-title{
     align-self: center;
-    font-size: 5vh;
+    font-size: 4.5vh;
     color: floralwhite;
     font-family: 'Questrial', sans-serif;
     text-transform: uppercase;
@@ -17,8 +17,12 @@
 }
 
 .graph-container{
-    background-color: floralwhite;
-    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(225, 220, 211);
+    width: 80vw;
     border-radius: 7.5px;
+    padding-bottom: 1vh;
 }
 

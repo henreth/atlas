@@ -28,7 +28,7 @@ export default function Home({testData}) {
 
   return (
     <div className='home-container'>
-      <div className='home-title'>🤖⚡️ Latest Blocks</div>
+      <div className='home-title'>⚡️🤖 Latest Blocks</div>
       <div className="graph-container">
         {displayGraph}
       </div>

@@ -23,6 +23,8 @@ ChartJS.register(
 
 export default function Graph({options, data}) {
     return (
+        <div className="graph">
             <Bar options={options} data={data} />
+        </div>
     )
 }
