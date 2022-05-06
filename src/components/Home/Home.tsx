@@ -18,7 +18,7 @@ export default function Home({testData}) {
         label: 'Miner Reward',
         data: blockrewards,
         borderColor: 'rgb(56, 56, 56)',
-        backgroundColor: 'red',
+        backgroundColor: 'navy',
       }
     ],
 
@@ -28,7 +28,7 @@ export default function Home({testData}) {
 
   return (
     <div className='home-container'>
-      <div className='home-title'>🤖⚡️</div>
+      <div className='home-title'>🤖⚡️ Latest Blocks</div>
       <div className="graph-container">
         {displayGraph}
       </div>

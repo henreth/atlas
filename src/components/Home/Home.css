@@ -14,16 +14,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 10vh;
+  margin-top: 1vh;
 }
 
 .home-title {
-  font-size: 15vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 5vh;
+  color: floralwhite;
+  font-family: 'Questrial', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 2vh;
 }
 
 .graph-container {
   background-color: floralwhite;
-  width: 50vw;
+  width: 85vw;
   border-radius: 7.5px;
 }
 /*# sourceMappingURL=Home.css.map */
