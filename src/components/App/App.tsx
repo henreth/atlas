@@ -1,9 +1,13 @@
+import React from 'react';
+import Home from '../Home/Home.tsx';
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div>🤖⚡️</div>
+    <React.Fragment>
+      <Home />
+    </React.Fragment>
   );
 }
 
-export default App;
+
