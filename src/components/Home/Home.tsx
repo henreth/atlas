@@ -2,10 +2,11 @@ import React from 'react';
 import Graph from '../Graph/Graph.tsx';
 import './Home.css';
 
-export default function Home({testData}) {
+export default function Home({ testData }) {
 
-  let labels = testData.map(block=>block.block_number)
-  let blockrewards = testData.map(block=>block.miner_reward)
+  let labels = testData.map(block => block.block_number)
+  let blockrewards = testData.map(block => block.miner_reward)
+  let gasfees = testData.map(block => block.gas_used)
 
   const options = {
     responsive: true,
@@ -15,20 +16,37 @@ export default function Home({testData}) {
     labels,
     datasets: [
       {
+        label: 'Gas Fees',
+        data: gasfees,
+        borderColor: 'rgb(56, 56, 56)',
+        backgroundColor: 'red',
+      },
+      {
         label: 'Miner Reward',
         data: blockrewards,
         borderColor: 'rgb(56, 56, 56)',
-        backgroundColor: 'navy',
+        backgroundColor: 'blue',
       }
     ],
 
   };
 
-  let displayGraph = testData?<Graph options={options} data={data} />:null
+  let displayGraph = testData ? <Graph options={options} data={data} /> : null
 
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
+      <div className="options">
+        <label className="display-choice">
+          <input type="radio" className="" />
+          <span>Miner Reward</span>
+        </label>
+        <label className="display-choice">
+          <input type="radio" className="" />
+          <span>Gas Fees</span>
+        </label>
+      </div>
+
       <div className="graph-container">
         {displayGraph}
       </div>
