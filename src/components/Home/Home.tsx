@@ -36,17 +36,6 @@ export default function Home({ testData }) {
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
-      <div className="options">
-        <label className="display-choice">
-          <input type="radio" className="" />
-          <span>Miner Reward</span>
-        </label>
-        <label className="display-choice">
-          <input type="radio" className="" />
-          <span>Gas Fees</span>
-        </label>
-      </div>
-
       <div className="graph-container">
         {displayGraph}
       </div>
