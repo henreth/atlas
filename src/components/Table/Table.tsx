@@ -8,8 +8,12 @@ export default function Table({ data }) {
     let dataToDisplay = data.slice(0, 15).map(block => {
         return (
             <tr >
-                <td>{block.block_number}</td>
-                <td>{block.miner_reward}</td>
+                <td>
+                    <a href={'https://etherscan.io/block/'+block.block_number}>
+                    {block.block_number}
+                    </a>
+                    </td>
+                <td>Ξ {(block.miner_reward / (10 ** 18)).toFixed(4)}</td>
                 <td>{block.gas_used}</td>
                 <td>{Math.round(block.miner_reward / block.gas_used / (10 ** 9))} gwei</td>
                 <td>{block.transactions.length}</td>
