@@ -36,6 +36,9 @@ export default function Home({ testData }) {
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
+      <div className='options'>
+          {/* tabs to select graph or table with information */}
+      </div>
       <div className="graph-container">
         {displayGraph}
       </div>
