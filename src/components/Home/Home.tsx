@@ -1,5 +1,6 @@
 import React from 'react';
 import Graph from '../Graph/Graph.tsx';
+import Table from '../Table/Table.tsx';
 import './Home.css';
 
 export default function Home({ testData }) {
@@ -32,16 +33,18 @@ export default function Home({ testData }) {
   };
 
   let displayGraph = testData ? <Graph options={options} data={data} /> : null
+  let displayTable = testData ? <Table data={testData} /> : null
 
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
       <div className='options'>
-          {/* tabs to select graph or table with information */}
+          {/* tabs to select Table or table with information */}
       </div>
-      <div className="graph-container">
+      {displayTable}
+      {/* <div className="graph-container">
         {displayGraph}
-      </div>
+      </div> */}
     </div>
   );
 }
