@@ -6,7 +6,6 @@
 
 .fl-table {
   border-radius: 5px;
-  font-size: 12px;
   font-weight: normal;
   border: none;
   border-collapse: collapse;
@@ -24,7 +23,7 @@
 
 .fl-table td {
   border-right: 1px solid #f8f8f8;
-  font-size: 20px;
+  font-size: 22.5px;
   color: #363636;
 }
 
@@ -45,9 +44,9 @@
 .fl-table thead th {
   color: #ffffff;
   background: #4FC3A1;
-  font-size: 30px;
-  padding-left: 25px;
-  padding-right: 25px;
+  font-size: 27.5px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .fl-table thead th:nth-child(odd) {
@@ -99,7 +98,6 @@
     overflow-x: hidden;
     overflow-y: auto;
     width: 120px;
-    font-size: 13px;
     text-overflow: ellipsis;
   }
   .fl-table thead th {
