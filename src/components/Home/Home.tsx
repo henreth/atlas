@@ -5,8 +5,8 @@ import './Home.css';
 
 export default function Home({ testData }) {
   let [pageNum, setPageNum] = useState(1)
-  let right = pageNum * 10
-  let left = right - 10
+  let right = pageNum * 15
+  let left = right - 15
 
   let blockData = testData.slice(left, right)
 
@@ -65,7 +65,7 @@ export default function Home({ testData }) {
       </div>
       {displayTable}
       <div className='results-message'>
-        <div>Currently viewing results {left + 1} to {right} of the last {blockData.length} blocks</div>
+        <div>Currently viewing results {left + 1} to {right<100?right:100} of the last {testData.length} blocks</div>
         <div className='results-control'>
           <button onClick={clickLeft}>{'<'}</button>
           <button onClick={clickRight}>{'>'}</button>
