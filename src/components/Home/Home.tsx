@@ -13,6 +13,7 @@ export default function Home({ testData }) {
   let labels = blockData.map(block => block.block_number)
   let blockrewards = blockData.map(block => (block.miner_reward / (10 ** 18)).toFixed(4))
   let gasfees = blockData.map(block => block.miner_reward / block.gas_used / (10 ** 9))
+  let numBundles = blockData.map(block => block.transactions.length)
 
   const options = {
     responsive: true,
@@ -32,6 +33,12 @@ export default function Home({ testData }) {
         data: blockrewards,
         borderColor: 'rgb(56, 56, 56)',
         backgroundColor: 'blue',
+      },
+      {
+        label: 'Number of Bundles',
+        data: numBundles,
+        borderColor: 'rgb(56, 56, 56)',
+        backgroundColor: 'green',
       }
     ],
 
