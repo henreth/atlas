@@ -26,6 +26,14 @@
     border-radius: 2.5px;
     padding-bottom: 1vh;
     box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+    margin: 30px 70px 70px;
 
 }
 
+.results-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
