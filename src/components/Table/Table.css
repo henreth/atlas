@@ -1,5 +1,5 @@
 .table-wrapper {
-  margin: 10px 70px 70px;
+  margin: 10px 70px 30px;
   -webkit-box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
 }
@@ -47,7 +47,7 @@
 
 .fl-table thead th {
   color: #ffffff;
-  background: #4FC3A1;
+  background: rgba(9, 10, 17, 0.8);
   font-size: 25px;
   padding-left: 50px;
   padding-right: 50px;
