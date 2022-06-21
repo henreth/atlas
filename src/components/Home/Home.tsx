@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react'
 import Graph from '../Graph/Graph.tsx';
 import Table from '../Table/Table.tsx';
 import './Home.css';
 
 export default function Home({ testData }) {
+  let [pageNum,setPageNum] = useState(1)
+  let right = pageNum * 10
+  let left = right - 10 
 
-  let labels = testData.map(block => block.block_number)
-  let blockrewards = testData.map(block => block.miner_reward)
-  let gasfees = testData.map(block => block.gas_used)
+  let blockData = testData.slice(left,right)
+
+  let labels = blockData.map(block => block.block_number)
+  let blockrewards = blockData.map(block => (block.miner_reward / (10 ** 18)).toFixed(4))
+  let gasfees = blockData.map(block => block.miner_reward / block.gas_used / (10 ** 9))
 
   const options = {
     responsive: true,
@@ -33,7 +38,7 @@ export default function Home({ testData }) {
   };
 
   let displayGraph = testData ? <Graph options={options} data={data} /> : null
-  let displayTable = testData ? <Table data={testData} /> : null
+  let displayTable = testData ? <Table data={blockData} pageNum={pageNum} setPageNum={setPageNum} left={left} right={right} /> : null
 
   return (
     <div className='home-container'>
@@ -42,9 +47,9 @@ export default function Home({ testData }) {
           {/* tabs to select Table or table with information */}
       </div>
       {displayTable}
-      {/* <div className="graph-container">
+      <div className="graph-container">
         {displayGraph}
-      </div> */}
+      </div>
     </div>
   );
 }

@@ -3,12 +3,8 @@ import './Table.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-export default function Table({ data }) {
+export default function Table({ data, pageNum,setPageNum,left,right }) {
     // gas price: bundle?.gas_used / (10 ** 9)
-    let [pageNum,setPageNum] = useState(1)
-    let right = pageNum * 10
-    let left = right - 10 
-
     function clickLeft(){
         if (pageNum===1) {}
         else setPageNum(pageNum-1)
@@ -19,7 +15,7 @@ export default function Table({ data }) {
         else setPageNum(pageNum+1)
     }
 
-    let dataToDisplay = data.slice(left,right).map(block => {
+    let dataToDisplay = data.map(block => {
         return (
             <tr >
                 <td>
