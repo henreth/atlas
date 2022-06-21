@@ -7,7 +7,17 @@ export default function Table({ data }) {
     // gas price: bundle?.gas_used / (10 ** 9)
     let [pageNum,setPageNum] = useState(1)
     let right = pageNum * 10
-    let left = pageNum === 1 ? 0 : right/2 
+    let left = right - 10 
+
+    function clickLeft(){
+        if (pageNum===1) {}
+        else setPageNum(pageNum-1)
+    }
+    
+    function clickRight(){
+        if (pageNum===10) {}
+        else setPageNum(pageNum+1)
+    }
 
     let dataToDisplay = data.slice(left,right).map(block => {
         return (
@@ -43,6 +53,8 @@ export default function Table({ data }) {
                 </tbody>
             </table>
             <div>Currently viewing results {left} to {right} of {data.length}</div>
+            <button onClick={clickLeft}> {'<'}</button>
+            <button onClick={clickRight}> {'>'}</button>
         </div>
     )
 }
