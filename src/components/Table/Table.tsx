@@ -13,7 +13,7 @@ export default function Table({ data }) {
         if (pageNum===1) {}
         else setPageNum(pageNum-1)
     }
-    
+
     function clickRight(){
         if (pageNum===10) {}
         else setPageNum(pageNum+1)
@@ -52,7 +52,7 @@ export default function Table({ data }) {
                     {dataToDisplay}
                 </tbody>
             </table>
-            <div>Currently viewing results {left} to {right} of {data.length}</div>
+            <div>Currently viewing results {left} to {right} of the last {data.length} blocks</div>
             <button onClick={clickLeft}> {'<'}</button>
             <button onClick={clickRight}> {'>'}</button>
         </div>
