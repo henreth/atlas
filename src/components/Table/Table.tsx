@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import './Table.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default function Table({ data }) {
-    console.log(data.length)
-
     // gas price: bundle?.gas_used / (10 ** 9)
     let [pageNum,setPageNum] = useState(1)
     let right = pageNum * 10
@@ -24,6 +24,7 @@ export default function Table({ data }) {
             <tr >
                 <td>
                     <a href={'https://etherscan.io/block/' + block.block_number}>
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                         {block.block_number}
                     </a>
                 </td>
@@ -52,7 +53,7 @@ export default function Table({ data }) {
                     {dataToDisplay}
                 </tbody>
             </table>
-            <div>Currently viewing results {left} to {right} of the last {data.length} blocks</div>
+            <div>Currently viewing results {left+1} to {right} of the last {data.length} blocks</div>
             <button onClick={clickLeft}> {'<'}</button>
             <button onClick={clickRight}> {'>'}</button>
         </div>
