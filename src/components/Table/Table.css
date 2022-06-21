@@ -23,7 +23,7 @@
 
 .fl-table td {
   border-right: 1px solid #f8f8f8;
-  font-size: 22.5px;
+  font-size: 20px;
   color: #363636;
 }
 
@@ -44,7 +44,7 @@
 .fl-table thead th {
   color: #ffffff;
   background: #4FC3A1;
-  font-size: 27.5px;
+  font-size: 25px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -124,5 +124,11 @@
     display: block;
     text-align: center;
   }
+}
+
+.block-link {
+  font-size: 90%;
+  color: #7d7d7d;
+  margin-right: .5%;
 }
 /*# sourceMappingURL=Table.css.map */

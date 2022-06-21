@@ -24,7 +24,7 @@ export default function Table({ data }) {
             <tr >
                 <td>
                     <a href={'https://etherscan.io/block/' + block.block_number}>
-                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='block-link'/>
                         {block.block_number}
                     </a>
                 </td>
