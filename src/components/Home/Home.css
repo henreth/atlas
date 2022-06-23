@@ -63,4 +63,29 @@
   -ms-flex-line-pack: center;
       align-content: center;
 }
+
+.footer {
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: floralwhite;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.footer a:hover {
+  color: #92e0d0;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
+
+.footer a:active {
+  color: #1a8870;
+  -webkit-transition: .15s;
+  transition: .15s;
+}
 /*# sourceMappingURL=Home.css.map */
