@@ -60,6 +60,7 @@ export default function Home({ testData }) {
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
+      <div className='footer'>all data provided by the <a href='https://blocks.flashbots.net/'>flashbots mev-blocks api</a></div>
       <div className='options'>
         {/* tabs to select Table or table with information */}
       </div>
@@ -74,7 +75,6 @@ export default function Home({ testData }) {
       <div className="graph-container">
         {displayGraph}
       </div>
-      <footer className='footer'>all data provided by the <a href='https://blocks.flashbots.net/'>Flashbots mev-blocks api</a></footer>
     </div>
   );
 }
