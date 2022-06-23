@@ -75,6 +75,7 @@ export default function Home({ testData }) {
       <div className="graph-container">
         {displayGraph}
       </div>
+      <div className='footer'> <a href='https://github.com/henreth/atlas'>developed by: </a> <a href='https://github.com/henreth'>@henreth</a></div>
     </div>
   );
 }
