@@ -74,6 +74,7 @@ export default function Home({ testData }) {
       <div className="graph-container">
         {displayGraph}
       </div>
+      <footer className='footer'>all data provided by the <a href='https://blocks.flashbots.net/'>Flashbots mev-blocks api</a></footer>
     </div>
   );
 }
