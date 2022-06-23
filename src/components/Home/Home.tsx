@@ -16,7 +16,7 @@ export default function Home({ testData }) {
   }
 
   function clickRight() {
-    if (pageNum === 10) { }
+    if (pageNum === 7) { }
     else setPageNum(pageNum + 1)
   }
 
@@ -65,10 +65,10 @@ export default function Home({ testData }) {
       </div>
       {displayTable}
       <div className='results-message'>
-        <div>Currently viewing results {left + 1} to {right<100?right:100} of the last {testData.length} blocks</div>
+        <div>Currently viewing results {left < 100?left + 1:91} to {right<100?right:100} of the last {testData.length} blocks</div>
         <div className='results-control'>
-          <button onClick={clickLeft}>{'<'}</button>
-          <button onClick={clickRight}>{'>'}</button>
+          <button onClick={clickLeft} disabled={pageNum===1}>{'<'}</button>
+          <button onClick={clickRight} disabled={pageNum===7}>{'>'}</button>
         </div>
       </div>
       <div className="graph-container">
