@@ -6,9 +6,9 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 export default function Table({ data}) {
     // gas price: bundle?.gas_used / (10 ** 9)
 
-    let dataToDisplay = data.map(block => {
+    let dataToDisplay = data.map((block,i) => {
         return (
-            <tr >
+            <tr key={i}>
                 <td>
                     <a href={'https://etherscan.io/block/' + block.block_number}>
                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='block-link' />
