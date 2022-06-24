@@ -16,7 +16,7 @@ export default function Home({ testData }) {
   }
 
   function clickRight() {
-    if (pageNum === 10) { }
+    if (pageNum === 7) { }
     else setPageNum(pageNum + 1)
   }
 
@@ -60,21 +60,28 @@ export default function Home({ testData }) {
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
+      <div className='subtitle'>all data provided by the <a href='https://blocks.flashbots.net/'>flashbots mev-blocks api</a></div>
       <div className='options'>
         {/* tabs to select Table or table with information */}
       </div>
       {displayTable}
       <div className='results-message'>
-        <div>Currently viewing results {left + 1} to {right<100?right:100} of the last {testData.length} blocks</div>
+        <div>Currently viewing results {left < 100 ? left + 1 : 91} to {right < 100 ? right : 100} of the last {testData.length} blocks</div>
         <div className='results-control'>
-          <button onClick={clickLeft}>{'<'}</button>
-          <button onClick={clickRight}>{'>'}</button>
+          <button onClick={clickLeft} disabled={pageNum === 1}>{'<'}</button>
+          <button onClick={clickRight} disabled={pageNum === 7}>{'>'}</button>
         </div>
       </div>
       <div className="graph-container">
         {displayGraph}
       </div>
-    </div>
+      <div className='footer'>
+        <a href='https://github.com/henreth/atlas'>developed by: </a>
+        <span>
+          <a href='https://github.com/henreth'>@henreth</a>
+        </span>
+      </div>
+    </div >
   );
 }
 

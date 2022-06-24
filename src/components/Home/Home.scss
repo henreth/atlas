@@ -9,11 +9,11 @@
 
 .home-title{
     align-self: center;
-    font-size: 4.5vh;
+    font-size: 5vh;
+    font-weight: bold;
     color: floralwhite;
     font-family: 'Questrial', sans-serif;
     text-transform: uppercase;
-    margin-bottom: 2vh;
 }
 
 .graph-container{
@@ -26,7 +26,7 @@
     border-radius: 2.5px;
     padding-bottom: 1vh;
     box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-    margin: 30px 70px 70px;
+    margin: 30px 70px 50px;
 
 }
 
@@ -36,4 +36,49 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+.footer{
+    transition: .15s;
+
+    a {
+        text-decoration: none;
+        color: floralwhite;
+        transition: .15s;
+
+        &:hover{
+            color: #92e0d0;
+            transition: .15s;
+        }
+        &:active{
+            color: #1a8870;
+            transition: .15s;
+        }
+    }
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.subtitle{
+    margin-bottom: 2vh;
+    transition: .15s;
+    font-size: 90%;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: floralwhite;
+        transition: .15s;
+
+        &:hover{
+            color: #92e0d0;
+            transition: .15s;
+        }
+        &:active{
+            color: #1a8870;
+            transition: .15s;
+        }
+    }
 }
