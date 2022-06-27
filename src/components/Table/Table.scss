@@ -16,6 +16,14 @@
     }
 }
 
+.hasMegaBundle {
+    color:green !important;
+}
+
+.noMegaBundle {
+    color:red !important;
+}
+
 .table-wrapper {
     margin: 10px 70px 30px;
     box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);

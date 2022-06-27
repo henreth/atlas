@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Graph from '../Graph/Graph.tsx';
 import Table from '../Table/Table.tsx';
 import './Home.css';
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 
