@@ -14,13 +14,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 1vh;
+  position: absolute;
+  top: 40vh;
+  left: 30vw;
 }
 
 .home-title {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   font-size: 5vh;
   font-weight: bold;
   color: floralwhite;
@@ -28,106 +27,22 @@
   text-transform: uppercase;
 }
 
-.graph-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-color: white;
-  width: 79vw;
-  border-radius: 2.5px;
-  -webkit-box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-  margin: 30px 70px 20px;
-}
-
-.results-message {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.footer {
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.footer a {
+a {
   text-decoration: none;
   color: floralwhite;
   -webkit-transition: .15s;
   transition: .15s;
 }
 
-.footer a:hover {
+a:hover {
   color: #92e0d0;
   -webkit-transition: .15s;
   transition: .15s;
 }
 
-.footer a:active {
+a:active {
   color: #1a8870;
   -webkit-transition: .15s;
   transition: .15s;
-}
-
-.footer span {
-  font-weight: bold;
-}
-
-.subtitle {
-  margin-bottom: 2vh;
-  -webkit-transition: .15s;
-  transition: .15s;
-  font-size: 90%;
-}
-
-.subtitle a {
-  text-decoration: none;
-  font-weight: bold;
-  color: floralwhite;
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.subtitle a:hover {
-  color: #92e0d0;
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.subtitle a:active {
-  color: #1a8870;
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.slider-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  width: 50.5vw;
-  margin-bottom: 30px;
 }
 /*# sourceMappingURL=Home.css.map */
