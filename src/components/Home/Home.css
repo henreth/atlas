@@ -40,10 +40,9 @@
   background-color: white;
   width: 77.5vw;
   border-radius: 2.5px;
-  padding-bottom: 1vh;
   -webkit-box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
-  margin: 30px 70px 50px;
+  margin: 30px 70px 20px;
 }
 
 .results-message {
@@ -117,5 +116,19 @@
   color: #1a8870;
   -webkit-transition: .15s;
   transition: .15s;
+}
+
+.slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 50.5vw;
+  padding-bottom: 1vh;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=Home.css.map */
