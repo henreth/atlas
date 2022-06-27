@@ -20,6 +20,7 @@ export default function Table({ data}) {
                 <td>{Math.round(block.miner_reward / block.gas_used / (10 ** 9))}
                     <span> gwei</span>
                 </td>
+                <td>{block.transactions.some(tx=>{return tx.is_megabundle})?'✓':'X'}</td>
                 <td>{block.transactions.length}</td>
             </tr>
         )
@@ -35,6 +36,7 @@ export default function Table({ data}) {
                             <th>Miner Reward</th>
                             <th>Gas Used</th>
                             <th>Gas Price</th>
+                            <th>MegaBundle?</th>
                             <th>Bundles</th>
                         </tr>
                     </thead>
