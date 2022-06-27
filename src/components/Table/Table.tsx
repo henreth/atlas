@@ -36,7 +36,10 @@ export default function Table({ data}) {
                             <th>Miner Reward</th>
                             <th>Gas Used</th>
                             <th>Gas Price</th>
-                            <th>MegaBundle?</th>
+                            <th className='megabundle'>
+                                <div>Has</div> 
+                                <div><span>MegaBundle?</span></div>
+                                </th>
                             <th>Bundles</th>
                         </tr>
                     </thead>

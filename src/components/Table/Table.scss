@@ -3,6 +3,18 @@
 //     background-color: orange;
 //     font-size: 175%;
 // }
+.megabundle {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        font-size: 18px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+}
 
 .table-wrapper {
     margin: 10px 70px 30px;
@@ -55,7 +67,7 @@
 
 .fl-table thead th {
     color: #ffffff;
-    background: rgba(9,10,17,0.8);
+    background: rgba(9, 10, 17, 0.8);
     font-size: 25px;
     padding-left: 50px;
     padding-right: 50px;
@@ -154,7 +166,7 @@
 }
 
 
-.block-link{
+.block-link {
     font-size: 90%;
     color: rgb(125, 125, 125);
     margin-right: .5%;
