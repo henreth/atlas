@@ -13,18 +13,21 @@ import './Graph.css';
 
 ChartJS.register(
     CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
 );
 
 
-export default function Graph({options, data}) {
+export default function Graph({ options, data }) {
     return (
-        <div className="graph">
-            <Bar options={options} data={data} />
-        </div>
+        <>
+            <div className="graph">
+                <Bar options={options} data={data} />
+            </div>
+            {/* <Range /> */}
+        </>
     )
 }

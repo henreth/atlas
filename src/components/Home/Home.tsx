@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import Graph from '../Graph/Graph.tsx';
 import Table from '../Table/Table.tsx';
 import './Home.css';
+import Slider, { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
 
 export default function Home({ testData }) {
   let [pageNum, setPageNum] = useState(1)
@@ -74,6 +77,9 @@ export default function Home({ testData }) {
       </div>
       <div className="graph-container">
         {displayGraph}
+      </div>
+      <div className='slider-container'>
+        <Slider range step={20} defaultValue={[0, 100]} />
       </div>
       <div className='footer'>
         <a href='https://github.com/henreth/atlas'>developed by: </a>
