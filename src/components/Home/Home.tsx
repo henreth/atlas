@@ -91,7 +91,7 @@ export default function Home({ testData }) {
       </div>
       <div className='slider-container'>
         <div>Range: {leftBound+1}:{rightBound}</div>
-        <Slider range dots pushable allowCross={false} step={5} defaultValue={[0, 100]} onChange={onSliderChange} 
+        <Slider range dots pushable allowCross={false} step={5} defaultValue={[0, 15]} onChange={onSliderChange} 
                 trackStyle={[{ backgroundColor: '#1a8870' }]}
                 handleStyle={[{ backgroundColor: '#92e0d0' },{ backgroundColor: '#92e0d0' }]}
                 // railStyle={{ backgroundColor: 'black' }}

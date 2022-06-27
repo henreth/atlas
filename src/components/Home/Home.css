@@ -38,7 +38,7 @@
   -ms-flex-line-pack: center;
       align-content: center;
   background-color: white;
-  width: 77.5vw;
+  width: 79vw;
   border-radius: 2.5px;
   -webkit-box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
@@ -128,7 +128,6 @@
   -ms-flex-line-pack: center;
       align-content: center;
   width: 50.5vw;
-  padding-bottom: 1vh;
   margin-bottom: 30px;
 }
 /*# sourceMappingURL=Home.css.map */
