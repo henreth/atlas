@@ -23,10 +23,14 @@ export default function Home({ testData }) {
     else setPageNum(pageNum + 1)
   }
 
-  let labels = blockData.map(block => block.block_number)
-  let blockrewards = blockData.map(block => (block.miner_reward / (10 ** 18)).toFixed(4))
-  let gasfees = blockData.map(block => block.miner_reward / block.gas_used / (10 ** 9))
-  let numBundles = blockData.map(block => block.transactions.length)
+  let [leftBound,setLeftBound] = useState(0)
+  let [rightBound,setRightBound] = useState(10) 
+  let graphData= testData.slice(leftBound,rightBound)
+
+  let labels = graphData.map(block => block.block_number)
+  let blockrewards = graphData.map(block => (block.miner_reward / (10 ** 18)).toFixed(4))
+  let gasfees = graphData.map(block => block.miner_reward / block.gas_used / (10 ** 9))
+  let numBundles = graphData.map(block => block.transactions.length)
 
   const options = {
     responsive: true,
@@ -60,6 +64,14 @@ export default function Home({ testData }) {
   let displayGraph = testData ? <Graph options={options} data={data} /> : null
   let displayTable = testData ? <Table data={blockData} pageNum={pageNum} setPageNum={setPageNum} left={left} right={right} /> : null
 
+
+
+  function log(value) {
+    console.log(value); //eslint-disable-line
+    setLeftBound(Math.min(...value))
+    setRightBound(Math.max(...value))
+  }
+
   return (
     <div className='home-container'>
       <div className='home-title'>⚡️🤖 Latest Blocks</div>
@@ -79,7 +91,11 @@ export default function Home({ testData }) {
         {displayGraph}
       </div>
       <div className='slider-container'>
-        <Slider range step={20} defaultValue={[0, 100]} />
+        <Slider range dots pushable allowCross={false} step={5} defaultValue={[0, 100]} onChange={log} 
+                trackStyle={[{ backgroundColor: '#1a8870' }]}
+                handleStyle={[{ backgroundColor: '#92e0d0' },{ backgroundColor: '#92e0d0' }]}
+                // railStyle={{ backgroundColor: 'black' }}
+                />
       </div>
       <div className='footer'>
         <a href='https://github.com/henreth/atlas'>developed by: </a>

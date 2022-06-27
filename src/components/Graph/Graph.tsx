@@ -27,7 +27,6 @@ export default function Graph({ options, data }) {
             <div className="graph">
                 <Bar options={options} data={data} />
             </div>
-            {/* <Range /> */}
         </>
     )
 }
