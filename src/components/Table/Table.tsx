@@ -7,6 +7,7 @@ export default function Table({ data}) {
     // gas price: bundle?.gas_used / (10 ** 9)
 
     let dataToDisplay = data.map((block,i) => {
+        let hasMegaBundle = block.transactions.some(tx=>{return tx.is_megabundle})
         return (
             <tr key={i}>
                 <td>
@@ -20,6 +21,7 @@ export default function Table({ data}) {
                 <td>{Math.round(block.miner_reward / block.gas_used / (10 ** 9))}
                     <span> gwei</span>
                 </td>
+                <td className={hasMegaBundle?'hasMegaBundle':''}>{hasMegaBundle?'✓':'x'}</td>
                 <td>{block.transactions.length}</td>
             </tr>
         )
@@ -35,6 +37,10 @@ export default function Table({ data}) {
                             <th>Miner Reward</th>
                             <th>Gas Used</th>
                             <th>Gas Price</th>
+                            <th className='megabundle'>
+                                <div>Contains</div> 
+                                <div><span>MegaBundle?</span></div>
+                                </th>
                             <th>Bundles</th>
                         </tr>
                     </thead>
