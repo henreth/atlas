@@ -66,15 +66,14 @@ export default function Home({ testData }) {
 
 
 
-  function log(value) {
-    console.log(value); //eslint-disable-line
+  function onSliderChange(value) {
     setLeftBound(Math.min(...value))
     setRightBound(Math.max(...value))
   }
 
   return (
     <div className='home-container'>
-      <div className='home-title'>⚡️🤖 Latest Blocks</div>
+      <div className='home-title'>⚡️🤖 Latest 100 Blocks</div>
       <div className='subtitle'>all data provided by the <a href='https://blocks.flashbots.net/'>flashbots mev-blocks api</a></div>
       <div className='options'>
         {/* tabs to select Table or table with information */}
@@ -91,7 +90,8 @@ export default function Home({ testData }) {
         {displayGraph}
       </div>
       <div className='slider-container'>
-        <Slider range dots pushable allowCross={false} step={5} defaultValue={[0, 100]} onChange={log} 
+        <div>Range: {leftBound+1}:{rightBound}</div>
+        <Slider range dots pushable allowCross={false} step={5} defaultValue={[0, 100]} onChange={onSliderChange} 
                 trackStyle={[{ backgroundColor: '#1a8870' }]}
                 handleStyle={[{ backgroundColor: '#92e0d0' },{ backgroundColor: '#92e0d0' }]}
                 // railStyle={{ backgroundColor: 'black' }}
